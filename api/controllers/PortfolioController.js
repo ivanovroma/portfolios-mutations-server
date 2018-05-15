@@ -62,7 +62,7 @@ module.exports = {
     
       if (removePortfolio._user === currentUserId) {
         
-        await Asset.destroy({ portfolio_id: portflioId })
+        await Asset.destroy({ _portfolio: portflioId })
       
         let removedPortfolioData = await Portfolio.destroy({ id: portflioId }).fetch()
         let removedPortfolio = removedPortfolioData[0]
