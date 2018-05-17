@@ -55,7 +55,7 @@ module.exports.routes = {
   
   'GET    /api/tickers/get-list': 'TickerController.getList',
   'GET    /api/tickers/search/:request': 'TickerController.search',
-  'GET    /api/tickers/get-supply-list': 'TickerController.getSupplyList'
+  // 'GET    /api/tickers/get-supply-list': 'TickerController.getSupplyList'
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
