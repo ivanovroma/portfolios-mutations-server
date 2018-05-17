@@ -126,9 +126,10 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cors: {
-      allowOrigins: [
-        'http://188.225.74.38:3000',
-      ]
+      allRoutes: true,
+      allowOrigins: 'http://188.225.74.38:3000',
+      allowCredentials: true,
+      allowRequestHeaders: 'content-type, authorization'
     },
 
   },
