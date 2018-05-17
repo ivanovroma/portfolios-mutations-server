@@ -23,7 +23,7 @@ module.exports = {
       if (!tickerListFromCoinMarketCup) return { err: 'Ticker array from Coin Market Cup is invalid' }
 
       let tickerListFromCoinMarketCupUpdated = []
-      for (var i = 0; i < tickerListFromCoinMarketCup.data.length; i++) {
+      for (let i = 0; i < tickerListFromCoinMarketCup.data.length; i++) {
         
         tickerListFromCoinMarketCupUpdated
         .push({
@@ -50,6 +50,43 @@ module.exports = {
       if (!savedTickerList.data) return { err: 'Error of writing tickers to the database' }
       return savedTickerList.data
 
-  }
+  },
+
+  // async getSupplyList() {
+
+  //   // Загружаем данные с Coin Market Cup
+  //   let tickerListFromCoinMarketCup = await axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=10000')
+  //     if (!tickerListFromCoinMarketCup.data) {
+  //       const tickerListFromCoinMarketCup = await axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=10000')
+  //     }
+
+  //   // Экстракция полученных данных
+  //   if (!tickerListFromCoinMarketCup) return { err: 'Ticker array from Coin Market Cup is invalid' }
+
+  //   let tickerListFromCoinMarketCupUpdated = []
+  //   for (let ticker of tickerListFromCoinMarketCup.data) {
+      
+  //     let hodl_supply = (ticker.total_supply - ticker.available_supply) / (ticker.total_supply / 100) 
+
+  //     if (hodl_supply < 20 && hodl_supply != 0 && ticker.rank >= 100 && ticker.rank <=200) {
+
+  //       tickerListFromCoinMarketCupUpdated.push({
+  //         name: ticker.name + ' (' + ticker.symbol + ')',
+  //         rank: ticker.rank,
+  //         available: ticker.available_supply,
+  //         total: ticker.total_supply,
+  //         max: ticker.max_supply,
+  //         hodl_supply
+  //       })
+
+  //     }
+    
+  //   }
+
+  //   // Возвращаем записанный документ
+  //   if (!tickerListFromCoinMarketCupUpdated) return { err: 'Error of writing tickers to the database' }
+  //   return tickerListFromCoinMarketCupUpdated
+
+  // }
   
 }

@@ -55,6 +55,23 @@ module.exports = {
       
     }
 
+  },
+
+  getSupplyList: async function (req, res) {
+    
+    try {
+
+      let tickerList = await TickerService.getSupplyList()
+      if (tickerList.err) return res.serverError(tickerList)
+
+      return res.ok(tickerList)
+    
+    } catch (err) {
+      
+      return res.serverError(err)
+    
+    }
+
   }
 
 }

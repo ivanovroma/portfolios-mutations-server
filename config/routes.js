@@ -54,7 +54,8 @@ module.exports.routes = {
   'DELETE /api/assets/remove/:id': 'AssetController.remove',
   
   'GET    /api/tickers/get-list': 'TickerController.getList',
-  'GET    /api/tickers/search/:request': 'TickerController.search'
+  'GET    /api/tickers/search/:request': 'TickerController.search',
+  'GET    /api/tickers/get-supply-list': 'TickerController.getSupplyList'
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
